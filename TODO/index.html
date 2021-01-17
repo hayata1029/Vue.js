@@ -7,8 +7,9 @@
   <body>
     <div id="app">
       <h2>TODO リスト</h2>
-      <form>
+      <form v-on:submit.prevent>
         <input type="text">
+        <button v-on:click="addItem">追加</button>
       </form>
     </div>
     <!-- 先にVue.jsを読み込む -->
