@@ -17,7 +17,6 @@
           <span v-bind:class="{ done:todo.isDone }">{{ todo.item }}</span>
           <button v-on:click="deleteItem(index)">削除</button>
         </li>
-        <pre>{{ $data }}</pre>
       </ul>
     </div>
     <!-- 先にVue.jsを読み込む -->
