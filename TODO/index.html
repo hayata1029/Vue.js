@@ -11,7 +11,14 @@
         <input type="text" v-model="newItem">
         <button v-on:click="addItem">追加</button>
       </form>
-      <pre>{{ $data }}</pre>
+      <ul>
+        <li v-for="(todo, index) in todos">
+          <input type="checkbox" v-model="todo.isDone">
+          <span v-bind:class="{ done:todo.isDone }">{{ todo.item }}</span>
+          <button v-on:click="deleteItem(index)">削除</button>
+        </li>
+        <pre>{{ $data }}</pre>
+      </ul>
     </div>
     <!-- 先にVue.jsを読み込む -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
