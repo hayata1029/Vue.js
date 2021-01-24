@@ -1,16 +1,11 @@
 'use strict';
 
-const number = Math.floor(Math.random() * 6 );
-const answer = parseInt(window.prompt('数当てゲーム。0〜５を入力してね'));
-let message;
-if (answer === number) {
-  message = 'あたり！';
-} else if (answer < number) {
-  message = 'もう少し大きい数字だよ';
-} else if (answer > number) {
-  message = 'もう少し小さい数字だよ';
-} else {
-  message = '0~5までの数字を入力してください！！！'
-}
+const hour = new Date().getHours();
 
-window.alert(message);
+if(hour >= 19 && hour <= 21) {
+  window.alert('お弁当30%OFF');
+} else if(hour === 9 || hour === 15) {
+  window.alert('お弁当1個買ったら1個おまけ');
+} else {
+  window.alert('お弁当はいかがですか？');
+}
