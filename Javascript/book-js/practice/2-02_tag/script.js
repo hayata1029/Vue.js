@@ -1,7 +1,10 @@
 'use strict';
 
-if (window.confirm('ゲームスタート！準備はいい？')) {
-  console.log('ゲームを開始します');
+const answer = window.prompt('ヘルプを見ますか？');
+if(answer === 'yes') {
+  window.alert('タップでジャンプ、障害物を避けます');
+} else if (answer === 'no') {
+  window.alert('ゲーム起動中');
 } else {
-  console.log('ゲームを中断します');
+  window.alert('yesかnoを入力してください')
 }
